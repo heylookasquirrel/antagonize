@@ -1,15 +1,16 @@
 import React from 'react';
+import { NavLink , Link } from 'react-router-dom'
 
 export class Navbar extends React.Component{
   render(){
     return (
       <nav>
         <ul id="firstMenu">
-          <li>Home</li>
+          <NavLink to="/"><li>Home</li></NavLink>
           <li>Sign Up!</li>
           <li>Write</li>
           <li>Explore</li>
-          <li>Activity</li>
+          <NavLink to="/activity"><li>Activity</li></NavLink>
         </ul>
         <ul>
           <li>Login</li>

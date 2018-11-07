@@ -6,6 +6,7 @@ import { Aboutauthor } from "./aboutauthor"
 import { Storysummary } from "./storysummary"
 import { Storycontent } from "./storycontent"
 import { Sideinfo } from "./sideinfo"
+import { Sidetags } from "./sidetags"
 
 
 let exampleUser = {
@@ -24,6 +25,9 @@ let exampleStory = {
   views: 123,
   recommended: 2,
   favs: 10,
+  tags: [
+    "test", "adventure" , "action" , "novice"
+  ],
   summary:"This is something we all saw coming",
   content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 }
@@ -55,10 +59,8 @@ export class Read extends React.Component{
 
         <aside>
           <Sideinfo story={exampleStory} user={exampleUser} />
+          <Sidetags story={exampleStory}/>
 
-          <div>
-
-          </div>
         </aside>
       </main>
 
